@@ -23,9 +23,41 @@ h2 {
   font-size: 40px;
   color: var(--primary-500);
 }
+h3 {
+  font-size: 32px;
+  color: var(--primary-500);
+}
+h4 {
+  font-size: 28px;
+  color: var(--primary-500);
+}
+h5 {
+  font-size: 22px;
+  color: var(--primary-500);
+}
+h6 {
+  font-size: 18px;
+  color: var(--primary-500);
+}
+a {
+  color: var(--interactive-400);
+}
+a:hover {
+  color: var(--interactive-300);
+}
+p {
+  font-size: 16px;
+  line-height: 24px;
+
+}
 .p-md {
   font-size: 20px;
   line-height: 28px;
+  color: var(--primary-500);
+}
+.p-lg {
+  font-size: 24px;
+  line-height: 32px;
   color: var(--primary-500);
 
 }
@@ -48,5 +80,7 @@ h2 {
   --interactive-400: #b98202;
 
   --box-shadow-100: 0px 0px 30px rgba(000, 000, 000, .2);
+
+  --box-shadow-interactive: 0px 0px 30px rgba(220, 178, 78, .2);
 
 }

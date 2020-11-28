@@ -12,6 +12,9 @@ const Button = (props) => {
                         height: 60px;
                         color: var(--interactive-300);
                     }
+                    button:focus {
+                        outline: none;
+                    }
                     button:hover {
                         cursor: pointer;
                         border: 1px solid var(--interactive-400);

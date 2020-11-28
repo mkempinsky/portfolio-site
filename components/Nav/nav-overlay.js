@@ -5,17 +5,27 @@ const NavOverlay = ({show}) => {
         <div className={`nav-overlay ${show ? '' : 'hidden'}`}>
             <ul className={`items ${show ? '' : 'hidden'}`}>
                 <li>
+                    <Link href="/">
+                        <a>Home</a>
+                    </Link>
+                </li>
+                <li>
                     <Link href="/blog">
                         <a>Blog</a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="/blog">
+                    <Link href="/resume">
                         <a>Resume</a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="/blog">
+                    <Link href="/contact">
+                        <a>Contact Me</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/about">
                         <a>About This Site</a>
                     </Link>
                 </li>
@@ -41,6 +51,7 @@ const NavOverlay = ({show}) => {
                         height: 100vh;
                         top: 0;
                         left: 270px;
+                        z-index: 1;
                         transition: all 0.5s;
                     }
                     .nav-overlay.hidden {
