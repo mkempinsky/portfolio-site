@@ -14,3 +14,39 @@ a {
 * {
   box-sizing: border-box;
 }
+
+h1 {
+  font-size: 52px;
+  color: var(--primary-500);
+}
+h2 {
+  font-size: 40px;
+  color: var(--primary-500);
+}
+.p-md {
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--primary-500);
+
+}
+
+:root {
+  --primary-100: #e9e8ee;
+  --primary-200: #bdbacc;
+  --primary-300: #928dab;
+  --primary-400: #666277;
+  --primary-500: #3a3844;
+
+  --secondary-100: #fff7de;
+  --secondary-200: #ffebac;
+  --secondary-300: #ffe38b;
+  --secondary-400: #ffd85a;
+
+  --interactive-100:#ebd39a;
+  --interactive-200: #dcb24e;
+  --interactive-300: #ce9103;
+  --interactive-400: #b98202;
+
+  --box-shadow-100: 0px 0px 30px rgba(000, 000, 000, .2);
+
+}
