@@ -11,28 +11,34 @@ const NavMobile = (props) => {
 
     return (
         <div className="nav-mobile">
-            <div>
-                <Link href="/">
-                    <a title="Home">
-                        <img src="/michele.jpg" alt="Michele" />
-                    </a>
-                </Link>
-            </div>
+            <div className="nav-mobile__inner">
+                <div>
+                    <Link href="/">
+                        <a title="Home">
+                            <img src="/michele.jpg" alt="Michele" />
+                        </a>
+                    </Link>
+                </div>
 
-            <div
-                className="nav-mobile__menu"
-                onClick={() => toggleOverlay((prevStateInput) => !prevStateInput)}>
-                {isShowing ? (
-                    <IconX fill="#fff" width="50px" height="50px" />
-                ) : (
-                    <IconMenu fill="#fff" width="50px" height="50px" />
-                )}
+                <div
+                    className="nav-mobile__menu"
+                    onClick={() => toggleOverlay((prevStateInput) => !prevStateInput)}>
+                    {isShowing ? (
+                        <IconX fill="#fff" width="50px" height="50px" />
+                    ) : (
+                        <IconMenu fill="#fff" width="50px" height="50px" />
+                    )}
+                </div>
+                <NavOverlay show={isShowing} />
             </div>
-            <NavOverlay show={isShowing} />
-
             <style jsx>
                 {`
                     .nav-mobile {
+                        position: fixed;
+                        width: 100%;
+                        top: 0;
+                    }
+                    .nav-mobile__inner {
                         height: 60px;
                         display: flex;
                         position: relative;
