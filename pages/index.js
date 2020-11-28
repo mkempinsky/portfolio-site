@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import Button from '../components/Button';
 import Image from '../components/Image';
+import {BREAKPOINT} from '../styles/styles';
 import Link from 'next/link';
 
 export default function Home() {
@@ -59,26 +60,48 @@ export default function Home() {
                             <Button>Contact Me</Button>
                         </a>
                     </Link>
-                    <div>
-                        <Button className="filled">Resume</Button>
-                    </div>
+                    <Link href="/resume">
+                        <a title="Resume">
+                            <Button className="filled">Resume</Button>
+                        </a>
+                    </Link>
                 </div>
             </Layout>
             <style jsx>
                 {`
                     .buttons {
-                        margin: 60px 0;
-                        display: flex;
+                        margin: 30px 0;
+                        display: block;
+                    }
+                    @media screen and (min-width: ${BREAKPOINT}) {
+                        .buttons {
+                            margin: 60px 0;
+                            display: flex;
+                        }
                     }
                     .buttons > a {
-                        margin-right: 15px;
+                        margin: 5px auto 15px auto;
+                        display: block;
+                        width: fit-content;
+                    }
+                    @media screen and (min-width: ${BREAKPOINT}) {
+                        .buttons > a {
+                            margin: 0 15px 0 0;
+                        }
                     }
                     .cartoon {
-                        display: inline-block;
-                        width: 250px;
-                        float: right;
-                        margin-left: 15px;
-                        margin-top: -50px;
+                        display: block;
+                        width: 90px;
+                        margin: 15px auto;
+                    }
+                    @media screen and (min-width: ${BREAKPOINT}) {
+                        .cartoon {
+                            display: inline-block;
+                            width: 250px;
+                            float: right;
+                            margin-left: 15px;
+                            margin-top: -50px;
+                        }
                     }
                 `}
             </style>

@@ -1,4 +1,6 @@
 import Nav from '../Nav';
+import {HiddenOnMobile, HiddenOnDesktop} from '../Hidden';
+import {BREAKPOINT} from '../../styles/styles';
 
 const Layout = (props) => {
     return (
@@ -6,7 +8,6 @@ const Layout = (props) => {
             <div className="container">
                 <div className="section__left">
                     <Nav />
-                    <footer>Copyright © 2020</footer>
                 </div>
                 <div className="section__right">
                     <div className="main">
@@ -29,15 +30,25 @@ const Layout = (props) => {
                     z-index: -2;
                 }
                 .container {
-                    display: flex;
-                    max-height: 100vh;
-                    overflow: hidden;
+                    display: block;
+                }
+                @media screen and (min-width: ${BREAKPOINT}) {
+                    .container {
+                        display: flex;
+                        max-height: 100vh;
+                        overflow: hidden;
+                    }
                 }
                 .section__left {
-                    flex: 1;
-                    position: relative;
-                    height: 100vh;
-                    max-width: 270px;
+                    height: 0;
+                }
+                @media screen and (min-width: ${BREAKPOINT}) {
+                    .section__left {
+                        flex: 1;
+                        position: relative;
+                        height: 100vh;
+                        max-width: 270px;
+                    }
                 }
 
                 .section__right {
@@ -49,21 +60,23 @@ const Layout = (props) => {
                     border-left: 1px solid var(--primary-100);
                     height: 100vh;
                     z-index: 1;
-                    padding: 60px 30px 20px 120px;
+                    padding: 30px 15px;
                     overflow-y: scroll;
+                    margin-top: 60px;
+                }
+                @media screen and (min-width: ${BREAKPOINT}) {
+                    .main {
+                        padding: 60px 30px 20px 120px;
+                        margin-top: 0px;
+                    }
                 }
                 .main__inner {
-                    max-width: 760px;
+                    max-width: 100%;
                 }
-                footer {
-                    position: absolute;
-                    bottom: 0;
-                    padding: 15px 0;
-                    max-width: 270px;
-                    background: var(--secondary-100);
-                    width: 100%;
-                    font-size: 12px;
-                    text-align: center;
+                @media screen and (min-width: ${BREAKPOINT}) {
+                    .main__inner {
+                        max-width: 760px;
+                    }
                 }
             `}</style>
         </div>
