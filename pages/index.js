@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import Button from '../components/Button';
 
 export default function Home() {
+    console.log('test');
     return (
         <div>
             <Head>
